@@ -1,2 +1,2 @@
-# cowlevel_style
-Monkey script modify cowlevel.net style
+# CowLevel_Style
+Monkey script modify http://cowlevel.net style
