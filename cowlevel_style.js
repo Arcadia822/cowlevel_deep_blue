@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Game Page Background-image Transparency Change
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -32,12 +32,16 @@ function addGlobalStyle(css) {
         .feedback-layer {background: rgb("+MAIN_BG_COLOR+")}                                                                                \
         .layui-layer-title {background: rgb("+MAIN_BG_COLOR+")}                                                                             \
         .bg-gradient-2 {background: rgba("+MAIN_BG_COLOR+",0.95)}                                                                           \
-        .bg-gradient{background: -webkit-gradient(linear, 0 24%, 0 100%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1)));\
-                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);\
-                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}\
-        .layer {background: rgb("+MAIN_BG_COLOR+")}\
-        .single-post {background: rgb("+MAIN_BG_COLOR+")}\
-        .fat-footer {background: rgb("+MAIN_BG_COLOR+")}\
+        .bg-gradient{background: -webkit-gradient(linear, 0 24%, 0 100%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1)));  \
+                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);                  \
+                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}                            \
+        .layer {background: rgb("+MAIN_BG_COLOR+")}                                                                                         \
+        .single-post {background: rgb("+MAIN_BG_COLOR+")}                                                                                   \
+        // .fat-footer {background: rgb("+MAIN_BG_COLOR+")}                                                                                 \
+        // .wrapper {background: rgb("+MAIN_BG_COLOR+")}                                                                                    \
+        .footer {background: rgb("+MAIN_BG_COLOR+")}                                                                                        \
+        .comments + .wrapper + .fat-footer {background: rgb("+MAIN_BG_COLOR+")}                                                             \
+        .comments {background: rgb("+MAIN_BG_COLOR+")}                                                                                      \
     ";
     addGlobalStyle(css_value);
 
