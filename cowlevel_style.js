@@ -32,11 +32,12 @@ function addGlobalStyle(css) {
         .feedback-layer {background: rgb("+MAIN_BG_COLOR+")}                                                                                \
         .layui-layer-title {background: rgb("+MAIN_BG_COLOR+")}                                                                             \
         .bg-gradient-2 {background: rgba("+MAIN_BG_COLOR+",0.95)}                                                                           \
-        .bg-gradient{background: -webkit-gradient(linear, 0 24%, 0 100%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1)));  \
-                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);                  \
-                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}                            \
-        .layer {background: rgb("+MAIN_BG_COLOR+")}                                                                                         \
-        .single-post {background: rgb("+MAIN_BG_COLOR+")}                                                                                   \
+        .bg-gradient{background: -webkit-gradient(linear, 0 24%, 0 100%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1)));\
+                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);\
+                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}\
+        .layer {background: rgb("+MAIN_BG_COLOR+")}\
+        .single-post {background: rgb("+MAIN_BG_COLOR+")}\
+        .fat-footer {background: rgb("+MAIN_BG_COLOR+")}\
     ";
     addGlobalStyle(css_value);
 
