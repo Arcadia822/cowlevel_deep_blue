@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Cowlevel Game Page Background-image Transparency Change
 // @namespace    http://tampermonkey.net/
-// @version      1.2.3
+// @version      1.4.0
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
-// @grant        none
+// @grant        CC BY-NC-SA 4.0
 // ==/UserScript==
 
 
@@ -23,7 +23,6 @@ function addGlobalStyle(css) {
 (function() {
     'use strict';
     // Your code here...
-
 
     var css_value="                                                                                                                         \
         body {background: rgb("+MAIN_BG_COLOR+")}                                                                                           \
@@ -45,8 +44,12 @@ function addGlobalStyle(css) {
         .comments {background: rgb("+MAIN_BG_COLOR+")}                                                                                      \
         .btn-card-border{background: rgb("+SECOND_BG_COLOR+")}                                                                              \
         .tip-window{background: rgb("+SECOND_BG_COLOR+")}                                                                                   \
-        .tip-tag{background: rgb("+LIGHT_BG_COLOR+")}                                                                                      \
+        .tip-tag{background: rgb("+LIGHT_BG_COLOR+")}                                                                                       \
     ";
     addGlobalStyle(css_value);
+
+
+    //change in-line style
+    document.getElementsByClassName("bg-gradient-2")[0].style.background="rgba("+MAIN_BG_COLOR+",0.9)";
 
 })();
