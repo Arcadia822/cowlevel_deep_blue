@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Style
 // @namespace    http://tampermonkey.net/
-// @version      1.4.1
+// @version      1.4.2
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -40,11 +40,13 @@ function addGlobalStyle(css) {
         .layer {background: rgb("+MAIN_BG_COLOR+")}                                                                                         \
         .single-post {background: rgb("+MAIN_BG_COLOR+")}                                                                                   \
         .footer {background: rgb("+MAIN_BG_COLOR+")}                                                                                        \
-        .comments + .wrapper + .fat-footer {background: rgb("+MAIN_BG_COLOR+")}                                                             \
+        .comments + .wrapper + .fat-footer {background: rgb("+SECOND_BG_COLOR+")}                                                           \
         .comments {background: rgb("+MAIN_BG_COLOR+")}                                                                                      \
         .btn-card-border{background: rgb("+SECOND_BG_COLOR+")}                                                                              \
         .tip-window{background-color: rgb("+MAIN_BG_COLOR+")}                                                                               \
-        //.tip-window-2{background-color: rgb("+MAIN_BG_COLOR+")}                                                                           \
+        .feedback-layer .layui-layer-title{ background: rgba("+SECOND_BG_COLOR+",.85);                                                      \
+                                            border-bottom: 1px solid rgba(255,255,255,.1);                                                  \
+                                            color: rgba(255,255,255,.9)}                                                                    \
         .tip-tag{background: rgb("+LIGHT_BG_COLOR+")}                                                                                       \
     ";
     addGlobalStyle(css_value);
