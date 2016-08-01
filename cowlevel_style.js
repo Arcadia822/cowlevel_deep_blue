@@ -53,6 +53,7 @@ function addGlobalStyle(css) {
         .vm-feed-card-article {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
         .vm-feed-card-answer {background: rgb("+SECOND_BG_COLOR+")}                                                                         \
         .vm-feed-card-reivew {background: rgb("+SECOND_BG_COLOR+")}                                                                         \
+        .vm-feed-card-question {background: rgb("+SECOND_BG_COLOR+")}                                                                       \
         .vm-style-double-bevel {background: rgb("+MAIN_BG_COLOR+"); height:5px}                                                             \
         .left-bevel {display: none}                                                                                                         \
         .right-bevel {display: none}                                                                                                        \
