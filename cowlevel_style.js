@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Style
 // @namespace    http://www.zhouyuxin.net/
-// @version      1.5.0
+// @version      1.5.1
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -54,7 +54,8 @@ function addGlobalStyle(css) {
         .vm-feed-card-answer {background: rgb("+SECOND_BG_COLOR+")}                                                                         \
         .vm-feed-card-reivew {background: rgb("+SECOND_BG_COLOR+")}                                                                         \
         .vm-feed-card-question {background: rgb("+SECOND_BG_COLOR+")}                                                                       \
-        .vm-style-double-bevel {background: rgb("+MAIN_BG_COLOR+"); height:5px}                                                             \
+        .vm-feed-card-game {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
+        .vm-style-double-bevel {background: rgb("+MAIN_BG_COLOR+"); padding-top:5px}                                                        \
         .left-bevel {display: none}                                                                                                         \
         .right-bevel {display: none}                                                                                                        \
     ";
