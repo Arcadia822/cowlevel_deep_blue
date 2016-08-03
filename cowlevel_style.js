@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Style
 // @namespace    http://www.zhouyuxin.net/
-// @version      1.5.2
+// @version      1.5.2.1
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -47,7 +47,7 @@ function addGlobalStyle(css) {
         .feedback-layer .layui-layer-title{ background: rgba("+SECOND_BG_COLOR+",.85);                                                      \
                                             border-bottom: 1px solid rgba(255,255,255,.1);                                                  \
                                             color: rgba(255,255,255,.9)}                                                                    \
-        .tip-tag{background: rgb("+SECOND_BG_COLOR+")}                                                                                       \
+        .tip-tag{background: rgb("+SECOND_BG_COLOR+")}                                                                                      \
         .hot-box .cl-card{background: rgb("+MAIN_BG_COLOR+")}                                                                               \
         #search-result-box {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
         .wanguo-swiper .shouchang-swiper .swiper-slide {background: rgb("+SECOND_BG_COLOR+")}                                               \
@@ -56,9 +56,11 @@ function addGlobalStyle(css) {
         .vm-feed-card-reivew {background: rgb("+SECOND_BG_COLOR+")}                                                                         \
         .vm-feed-card-question {background: rgb("+SECOND_BG_COLOR+")}                                                                       \
         .vm-feed-card-game {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
-        .vm-style-double-bevel {background: rgb("+MAIN_BG_COLOR+"); padding-top:5px}                                                        \
+        .vm-style-double-bevel {background: rgb("+MAIN_BG_COLOR+"); padding-top:3px}                                                        \
         .left-bevel {display: none}                                                                                                         \
         .right-bevel {display: none}                                                                                                        \
+        .wangEditor-container {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
+        .wangEditor-menu-container {background: rgb("+SECOND_BG_COLOR+")}                                                                   \
     ";
     addGlobalStyle(css_value);
 
