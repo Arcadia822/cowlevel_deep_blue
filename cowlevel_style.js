@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Style
 // @namespace    http://www.zhouyuxin.net/
-// @version      1.5.2.1
+// @version      1.5.2.2
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -48,6 +48,7 @@ function addGlobalStyle(css) {
                                             border-bottom: 1px solid rgba(255,255,255,.1);                                                  \
                                             color: rgba(255,255,255,.9)}                                                                    \
         .tip-tag{background: rgb("+SECOND_BG_COLOR+")}                                                                                      \
+        .tip-game{background: rgb("+SECOND_BG_COLOR+")}                                                                                     \
         .hot-box .cl-card{background: rgb("+MAIN_BG_COLOR+")}                                                                               \
         #search-result-box {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
         .wanguo-swiper .shouchang-swiper .swiper-slide {background: rgb("+SECOND_BG_COLOR+")}                                               \
