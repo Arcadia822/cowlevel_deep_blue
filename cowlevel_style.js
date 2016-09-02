@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Style
 // @namespace    http://www.zhouyuxin.net/
-// @version      1.5.3
+// @version      1.5.4
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -9,8 +9,9 @@
 
 
 var MAIN_BG_COLOR='26,44,64';
-var SECOND_BG_COLOR='23,26,33';
-var LIGHT_BG_COLOR='145,145,144';
+var SECOND_BG_COLOR='7,25,45';
+var LIGHT_BG_COLOR='48,60,72';
+var RED_BG_COLOR='70,25,61';
 
 function addGlobalStyle(css) {
     var style = document.createElement('style');
@@ -43,7 +44,8 @@ function addGlobalStyle(css) {
         .comments.wrapper.fat-footer {background: rgb("+SECOND_BG_COLOR+")}                                                                 \
         .comments {background: rgb("+MAIN_BG_COLOR+")}                                                                                      \
         .btn-card-border{background: rgb("+SECOND_BG_COLOR+")}                                                                              \
-        .tip-window{background-color: rgb("+MAIN_BG_COLOR+")}                                                                               \
+        .notice-tip-window{background-color: rgb("+MAIN_BG_COLOR+")}                                                                        \
+        .notice-tab li.weidu{background-color: rgb("+MAIN_BG_COLOR+")}                                                                      \
         .feedback-layer.layui-layer-title{ background: rgba("+SECOND_BG_COLOR+",.85);                                                       \
                                             border-bottom: 1px solid rgba(255,255,255,.1);                                                  \
                                             color: rgba(255,255,255,.9)}                                                                    \
@@ -62,8 +64,8 @@ function addGlobalStyle(css) {
                      to(rgba("+MAIN_BG_COLOR+",1)));                                                                                        \
                      background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);                  \
                      background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}                            \
-        div.vm-personal-card + div.clearfix:not(.gl-user-card-box) {background: rgb("+MAIN_BG_COLOR+")}                                     \
-        .vm-style-double-bevel {background: rgb("+MAIN_BG_COLOR+"); padding-top:3px}                                                        \
+        div.vm-personal-card > .clearfix {background: rgb("+LIGHT_BG_COLOR+")}                                                              \
+        .vm-style-double-bevel {background: rgb("+LIGHT_BG_COLOR+"); padding-top:3px}                                                       \
         .vm-layer-more-user {background: rgb("+MAIN_BG_COLOR+")}                                                                            \
         section.vm-avatar.flex-box {background: rgb("+SECOND_BG_COLOR+")}                                                                   \
         .left-bevel {display: none}                                                                                                         \
