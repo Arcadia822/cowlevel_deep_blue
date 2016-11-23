@@ -109,6 +109,7 @@ function addGlobalStyle(css) {
         .right-bevel {display: none}                                                                                                        \
         .wangEditor-container {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
         .wangEditor-menu-container {background: rgb("+SECOND_BG_COLOR+")}                                                                   \
+        .cl-card {background: rgb("+SECOND_BG_COLOR+")}                                                                                     \
     ";
     addGlobalStyle(css_value);
 
