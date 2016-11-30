@@ -110,6 +110,9 @@ function addGlobalStyle(css) {
         .wangEditor-container {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
         .wangEditor-menu-container {background: rgb("+SECOND_BG_COLOR+")}                                                                   \
         .cl-card {background: rgb("+SECOND_BG_COLOR+")}                                                                                     \
+        .vm-element-item {background: rgb("+SECOND_BG_COLOR+")}                                                                             \
+        .vm-element-game-item {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
+        .vm-element-header {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
     ";
     addGlobalStyle(css_value);
 
