@@ -111,8 +111,13 @@ function addGlobalStyle(css) {
         .wangEditor-menu-container {background: rgb("+SECOND_BG_COLOR+")}                                                                   \
         .cl-card {background: rgb("+SECOND_BG_COLOR+")}                                                                                     \
         .vm-element-item {background: rgb("+SECOND_BG_COLOR+")}                                                                             \
+        .vm-element-item.white.on {background: rgb("+RED_BG_COLOR+")}                                                                       \
         .vm-element-game-item {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
         .vm-element-header {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
+        div.desc.sticky-box > .flex-box.flex-align-items-center.footer-info-box {background: rgb("+SECOND_BG_COLOR+")}                      \
+        div.tag-box.white {background: rgb("+SECOND_BG_COLOR+")}                                                                            \
+        div.tag-box.white.on {background: rgb("+RED_BG_COLOR+")}                                                                            \
+        div.tag-box.white.hover {background: rgb("+LIGHT_BG_COLOR+")}                                                                       \
     ";
     addGlobalStyle(css_value);
 
