@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Style
 // @namespace    http://www.zhouyuxin.net/
-// @version      1.5.4
+// @version      1.6.0
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
