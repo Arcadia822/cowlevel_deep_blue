@@ -63,6 +63,22 @@ function addGlobalStyle(css) {
     document.body.appendChild(style);
 }
 
+function changeInlineBackgroundByClass(cls_name_, css) {
+    try {
+        document.getElementsByClassName(cls_name_)[0].style.background=css;
+    }
+    catch (err) {
+    }
+}
+
+function changeInlineAttrBySelector(selector, attr_name, css) {
+    try {
+        $(selector).css(attr_name,css);
+    }
+    catch (err) {
+    }
+}
+
 (function() {
     'use strict';
     // Your code here...
@@ -88,6 +104,9 @@ function addGlobalStyle(css) {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
         article.main {
+            background: rgb(`+MAIN_BG_COLOR+`)
+        }
+        body > article > section {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
         body {
@@ -123,15 +142,6 @@ function addGlobalStyle(css) {
         }
 
 
-        /* editor */
-        #layui-layer2 > div > section {
-            background: rgb(`+MAIN_BG_COLOR+`)
-        }
-        #layui-layer2 > div > section > div > div.edit-signplayed-content-box.clearfix {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-
-
         /* settings */
             div.setting-card {
             background: rgb(`+SECOND_BG_COLOR+`)
@@ -150,63 +160,25 @@ function addGlobalStyle(css) {
         }
 
 
-        /* feedback */
+        /* layui */
         .layui-layer-wrap {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
-
-
-        .vm-draft-card {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-
-        /* other */
-        .open-layer {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .setting-list {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .feedback-layer {
+        #layui-layer1 > div {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
         .layui-layer-title {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
+        .feedback-layer {
+            background: rgb(`+MAIN_BG_COLOR+`)
+        }
         .layer {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
-        .single-post {
-            background: rgb(`+MAIN_BG_COLOR+`)
-        }
-        .comments.wrapper.fat-footer {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .comments {
-            background: rgb(`+MAIN_BG_COLOR+`)
-        }
-        .btn-card-border {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .notice-tip-window {
-            background-color: rgb(`+MAIN_BG_COLOR+`)
-        }
-        .notice-tab li.weidu {
-            background-color: rgb(`+MAIN_BG_COLOR+`)
-        }
-        .tip-tag {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        div.tip-game {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .hot-box.cl-card {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .swiper-slide.cl-shadow.block {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .wanguo-swiper.shouchang-swiper.swiper-slide {
+
+        /* element */
+        .vm-draft-card {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
         .vm-feed-card-article {
@@ -240,24 +212,6 @@ function addGlobalStyle(css) {
         .vm-layer-more-user {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
-        section.vm-avatar.flex-box {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .left-bevel {
-            display: none
-        }
-        .right-bevel {
-            display: none
-        }
-        .wangEditor-container {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .wangEditor-menu-container {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        .cl-card {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
         .vm-element-item {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
@@ -268,6 +222,65 @@ function addGlobalStyle(css) {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
         .vm-element-header {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+
+
+        /* comments */
+        .comments.wrapper.fat-footer {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .comments {
+            background: rgb(`+MAIN_BG_COLOR+`)
+        }
+
+
+        /* other */
+        .open-layer {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .setting-list {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .single-post {
+            background: rgb(`+MAIN_BG_COLOR+`)
+        }
+
+
+        .btn-card-border {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .notice-tip-window {
+            background-color: rgb(`+MAIN_BG_COLOR+`)
+        }
+        .notice-tab li.weidu {
+            background-color: rgb(`+MAIN_BG_COLOR+`)
+        }
+        .tip-tag {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        div.tip-game {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .hot-box.cl-card {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .swiper-slide.cl-shadow.block {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .wanguo-swiper.shouchang-swiper.swiper-slide {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        section.vm-avatar.flex-box {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        .left-bevel {
+            display: none
+        }
+        .right-bevel {
+            display: none
+        }
+        .cl-card {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
         div.desc.sticky-box > .flex-box.flex-align-items-center.footer-info-box {
@@ -290,9 +303,13 @@ function addGlobalStyle(css) {
 
 
     //change in-line style
-    try {
-        document.getElementsByClassName("bg-gradient-2")[0].style.background="rgba(`+MAIN_BG_COLOR+`,0.9)";
-    }
-    catch (err) {
-    }
+    changeInlineBackgroundByClass("v3-main", "rgb("+MAIN_BG_COLOR+")");
+
+    /* editor */
+    changeInlineBackgroundByClass("fr-counter", "rgb("+MAIN_BG_COLOR+")");
+    // changeInlineBackgroundByClass("fr-toolbar", "rgb("+MAIN_BG_COLOR+")");
+    // changeInlineBackgroundByClass("fr-footer", "rgb("+MAIN_BG_COLOR+")");
+    changeInlineAttrBySelector(".fr-basic", "background", "rgb("+MAIN_BG_COLOR+")");
+    // changeInlineAttrBySelector(".fr-wrapper > div", "background", "rgb("+MAIN_BG_COLOR+")");
+    // changeInlineAttrBySelector(".fr-wrapper > textarea", "background", "rgb("+MAIN_BG_COLOR+")");
 })();
