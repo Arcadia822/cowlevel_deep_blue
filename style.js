@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Cowlevel Deep Blue
+// @name         Cowlevel Deep Blue Test
 // @namespace    Arc
-// @version      1.7.2
+// @version      1.7.3
 // @description  A Solarized like dark theme for Cowlevel.net
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -123,14 +123,11 @@ function addGlobalStyle(css) {
         }
 
 
-        /* game review editor */
+        /* editor */
         #layui-layer2 > div > section {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
         #layui-layer2 > div > section > div > div.edit-signplayed-content-box.clearfix {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        #layui-layer2 > div > section > div > div.edit-signplayed-content-box.clearfix > div > div.fr-footer > span {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
 
@@ -157,16 +154,11 @@ function addGlobalStyle(css) {
         .layui-layer-wrap {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
-        #layui-layer1 > div > div > form > div:nth-child(2) > div.col-11 > div > div.fr-footer > span {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        div.fr-footer {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        div.fr-element.fr-view {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
 
+
+        .vm-draft-card {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
 
         /* other */
         .open-layer {
