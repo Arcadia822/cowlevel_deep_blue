@@ -54,6 +54,7 @@ var MAIN_BG_COLOR=MAIN_COLOR_0;
 var SECOND_BG_COLOR=MAIN_COLOR_3;
 var LIGHT_BG_COLOR=MAIN_COLOR_2;
 var RED_BG_COLOR=SECOND_COLOR_0;
+var INPUT_BG_COLOR=MAIN_COLOR_4;
 
 
 function addGlobalStyle(css) {
@@ -307,10 +308,11 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
 
 
     //change in-line style
+    /* body */
     changeInlineBackgroundByClass("v3-main", "rgb("+MAIN_BG_COLOR+")");
+    changeInlineAttrBySelector("body > article:nth-child(13)", "background", "rgb("+MAIN_BG_COLOR+")");
 
     /* editor */
-    changeInlineBackgroundByClass("fr-counter", "rgb("+MAIN_BG_COLOR+")");
-    changeInlineAttrBySelector(".fr-basic", "background", "rgb("+MAIN_BG_COLOR+")");
-
+    changeInlineBackgroundByClass("fr-counter", "rgb("+INPUT_BG_COLOR+")");
+    changeInlineAttrBySelector(".fr-basic", "background", "rgb("+INPUT_BG_COLOR+")");
 })();
