@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Style
 // @namespace    http://www.zhouyuxin.net/
-// @version      1.6.0
+// @version      1.7
 // @description  CowLevel Steam Color Theme
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -67,60 +67,207 @@ function addGlobalStyle(css) {
     'use strict';
     // Your code here...
 
-    var css_value="                                                                                                                         \
-        body {background: rgb("+MAIN_BG_COLOR+")}                                                                                           \
-        .header-nav {background: rgb("+SECOND_BG_COLOR+")}                                                                                  \
-        .open-layer {background: rgb("+SECOND_BG_COLOR+")}                                                                                  \
-        .setting-list {background: rgb("+SECOND_BG_COLOR+")}                                                                                \
-        .feedback-layer {background: rgb("+MAIN_BG_COLOR+")}                                                                                \
-        .layui-layer-title {background: rgb("+MAIN_BG_COLOR+")}                                                                             \
-        .tip-window {background: rgb("+MAIN_BG_COLOR+")}                                                                                    \
-        .bg-gradient-2 {background: rgba("+MAIN_BG_COLOR+",0.95)}                                                                           \
-        .bg-gradient{background: -webkit-gradient(linear, 0 24%, 0 60%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1)));   \
-                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);                  \
-                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}                            \
-        .bg-gradient-3{background: -webkit-gradient(linear, 0 24%, 0 60%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1))); \
-                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);                  \
-                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}                            \
-        .layer {background: rgb("+MAIN_BG_COLOR+")}                                                                                         \
-        .single-post {background: rgb("+MAIN_BG_COLOR+")}                                                                                   \
-        .footer {background: rgb("+MAIN_BG_COLOR+")}                                                                                        \
-        .comments.wrapper.fat-footer {background: rgb("+SECOND_BG_COLOR+")}                                                                 \
-        .comments {background: rgb("+MAIN_BG_COLOR+")}                                                                                      \
-        .btn-card-border{background: rgb("+SECOND_BG_COLOR+")}                                                                              \
-        .notice-tip-window{background-color: rgb("+MAIN_BG_COLOR+")}                                                                        \
-        .notice-tab li.weidu{background-color: rgb("+MAIN_BG_COLOR+")}                                                                      \
-        .tip-tag{background: rgb("+SECOND_BG_COLOR+")}                                                                                      \
-        .tip-game{background: rgb("+SECOND_BG_COLOR+")}                                                                                     \
-        .hot-box.cl-card{background: rgb("+SECOND_BG_COLOR+")}                                                                              \
-        .swiper-slide.cl-shadow.block{background: rgb("+SECOND_BG_COLOR+")}                                                                 \
-        #search-result-box {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
-        .wanguo-swiper.shouchang-swiper.swiper-slide {background: rgb("+SECOND_BG_COLOR+")}                                                 \
-        .vm-feed-card-article {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
-        .vm-feed-card-answer {background: rgb("+SECOND_BG_COLOR+")}                                                                         \
-        .vm-feed-card-question {background: rgb("+SECOND_BG_COLOR+")}                                                                       \
-        .vm-feed-card-review {background: rgb("+SECOND_BG_COLOR+")}                                                                         \
-        .vm-feed-card-game {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
-        div.vm-personal-card > .clearfix {background: rgb("+LIGHT_BG_COLOR+")}                                                              \
-        .vm-style-double-bevel {background: rgb("+LIGHT_BG_COLOR+"); padding-top:3px}                                                       \
-        .vm-layer-more-user {background: rgb("+MAIN_BG_COLOR+")}                                                                            \
-        section.vm-avatar.flex-box {background: rgb("+SECOND_BG_COLOR+")}                                                                   \
-        .left-bevel {display: none}                                                                                                         \
-        .right-bevel {display: none}                                                                                                        \
-        .wangEditor-container {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
-        .wangEditor-menu-container {background: rgb("+SECOND_BG_COLOR+")}                                                                   \
-        .cl-card {background: rgb("+SECOND_BG_COLOR+")}                                                                                     \
-        .vm-element-item {background: rgb("+SECOND_BG_COLOR+")}                                                                             \
-        .vm-element-item.white.on {background: rgb("+RED_BG_COLOR+")}                                                                       \
-        .vm-element-game-item {background: rgb("+SECOND_BG_COLOR+")}                                                                        \
-        .vm-element-header {background: rgb("+SECOND_BG_COLOR+")}                                                                           \
-        div.desc.sticky-box > .flex-box.flex-align-items-center.footer-info-box {background: rgb("+SECOND_BG_COLOR+")}                      \
-        div.tag-box.white {background: rgb("+SECOND_BG_COLOR+")}                                                                            \
-        div.tag-box.white.on {background: rgb("+RED_BG_COLOR+")}                                                                            \
-        div.tag-box.white.hover {background: rgb("+LIGHT_BG_COLOR+")}                                                                       \
-    ";
-    addGlobalStyle(css_value);
+    var css_value=`
+        /* header */
+        #snow-target.header-nav {
+            background: var(--second_bg_color)
+        }
+        .top-nav {
+            background: var(--second_bg_color)
+        }
+        .bottom-nav {
+            background: var(--second_bg_color)
+        }
+        nav.header-nav.clearfix {
+            background: var(--second_bg_color)
+        }
 
+        /* body */
+        div.wrap-outer {
+            background: var(--main_bg_color)
+        }
+        article.main.wrap-outer {
+            background: var(--main_bg_color)
+        }
+        article.main {
+            background: var(--main_bg_color)
+        }
+        body {
+            background: var(--main_bg_color)
+        }
+        .footer {
+            background: var(--main_bg_color)
+        }
+
+        /* transparent_background*/
+        .bg-gradient-2 {background: rgba("+MAIN_BG_COLOR+",0.95)}
+        .bg-gradient{background: -webkit-gradient(linear, 0 24%, 0 60%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1)));
+                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);
+                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}
+        .bg-gradient-3{background: -webkit-gradient(linear, 0 24%, 0 60%, from(rgba("+MAIN_BG_COLOR+",.1)), to(rgba("+MAIN_BG_COLOR+",1)));
+                     background: linear-gradient(-180deg, rgba("+MAIN_BG_COLOR+",.1) 24%, rgba("+MAIN_BG_COLOR+",1) 100%);
+                     background: -moz-linear-gradient(top, rgba("+MAIN_BG_COLOR+".1),rgba("+MAIN_BG_COLOR+",1))}
+        .tip-window {
+            background: var(--main_bg_color)
+        }
+
+
+        .tip-window {background: rgb("+MAIN_BG_COLOR+")}
+        /* game review editor */
+        #layui-layer2 > div > section {
+            background: var(--main_bg_color)
+        }
+        #layui-layer2 > div > section > div > div.edit-signplayed-content-box.clearfix {
+            background: var(--second_bg_color)
+        }
+        #layui-layer2 > div > section > div > div.edit-signplayed-content-box.clearfix > div > div.fr-footer > span {
+            background: var(--second_bg_color)
+        }
+        div.fr-toolbar.custom-theme.fr-ltr.fr-desktop.fr-top.fr-basic.fr-sticky.fr-sticky-off {
+            background: var(--second_bg_color)
+        }
+
+        /* settings */
+            div.setting-card {
+            background: var(--second_bg_color)
+        }
+        /* invite */
+        section.invite-header.flex-box {
+            background: var(--second_bg_color)
+        }
+        section.vm-user-item-card {
+            background: var(--second_bg_color)
+        }
+        section.vm-invitation-item.bg-img {
+            background-image: url("http://www.mountnoon.com/assets/files/2017-03-22/04:07:240-ticket2x-solarized.png")
+        }
+
+        .open-layer {
+            background: var(--second_bg_color)
+        }
+        .setting-list {
+            background: var(--second_bg_color)
+        }
+        .feedback-layer {
+            background: var(--main_bg_color)
+        }
+        .layui-layer-title {
+            background: var(--main_bg_color)
+        }
+        .layer {
+            background: var(--main_bg_color)
+        }
+        .single-post {
+            background: var(--main_bg_color)
+        }
+        .comments.wrapper.fat-footer {
+            background: var(--second_bg_color)
+        }
+        .comments {
+            background: var(--main_bg_color)
+        }
+        .btn-card-border {
+            background: var(--second_bg_color)
+        }
+        .notice-tip-window {
+            background-color: var(--main_bg_color)
+        }
+        .notice-tab li.weidu {
+            background-color: var(--main_bg_color)
+        }
+        .tip-tag {
+            background: var(--second_bg_color)
+        }
+        div.tip-game {
+            background: var(--second_bg_color)
+        }
+        .hot-box.cl-card {
+            background: var(--second_bg_color)
+        }
+        .swiper-slide.cl-shadow.block {
+            background: var(--second_bg_color)
+        }
+        .wanguo-swiper.shouchang-swiper.swiper-slide {
+            background: var(--second_bg_color)
+        }
+        .vm-feed-card-article {
+            background: var(--second_bg_color)
+        }
+        .vm-feed-card-answer {
+            background: var(--second_bg_color)
+        }
+        .vm-feed-card-question {
+            background: var(--second_bg_color)
+        }
+        .vm-feed-card-review {
+            background: var(--second_bg_color)
+        }
+        .vm-feed-card-game {
+            background: var(--second_bg_color)
+        }
+        .vm-feed-card-played {
+            background: var(--second_bg_color)
+        }
+        .vm-feed-card-answer-comment {
+            background: var(--second_bg_color)
+        }
+        div.vm-personal-card > .clearfix {
+            background: var(--light_bg_color)
+        }
+        .vm-style-double-bevel {
+            background: var(--light_bg_color);
+            padding-top: 3px
+        }
+        .vm-layer-more-user {
+            background: var(--main_bg_color)
+        }
+        section.vm-avatar.flex-box {
+            background: var(--second_bg_color)
+        }
+        .left-bevel {
+            display: none
+        }
+        .right-bevel {
+            display: none
+        }
+        .wangEditor-container {
+            background: var(--second_bg_color)
+        }
+        .wangEditor-menu-container {
+            background: var(--second_bg_color)
+        }
+        .cl-card {
+            background: var(--second_bg_color)
+        }
+        .vm-element-item {
+            background: var(--second_bg_color)
+        }
+        .vm-element-item.white.on {
+            background: var(--red_bg_color)
+        }
+        .vm-element-game-item {
+            background: var(--second_bg_color)
+        }
+        .vm-element-header {
+            background: var(--second_bg_color)
+        }
+        div.desc.sticky-box > .flex-box.flex-align-items-center.footer-info-box {
+            background: var(--second_bg_color)
+        }
+        div.tag-box.white {
+            background: var(--second_bg_color)
+        }
+        div.tag-box.white.on {
+            background: var(--red_bg_color)
+        }
+        div.tag-box.white.hover {
+            background: var(--light_bg_color)
+        }
+        .add-question-box {
+            background: var(--second_bg_color)
+        }
+    `;
+    addGlobalStyle(css_value);
 
     //change in-line style
     try {
