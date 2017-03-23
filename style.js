@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Cowlevel Deep Blue
+// @name         Cowlevel Deep Blue Test
 // @namespace    Arc
-// @version      1.7
+// @version      1.7.1
 // @description  A Solarized like dark theme for Cowlevel.net
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -82,6 +82,7 @@ function addGlobalStyle(css) {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
 
+
         /* body */
         article.main.wrap-outer {
             background: rgb(`+MAIN_BG_COLOR+`)
@@ -92,11 +93,15 @@ function addGlobalStyle(css) {
         body {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
+
+
+        /* footer */
         .footer {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
 
-        /* transparent_background*/
+
+        /* transparent background*/
         .bg-gradient-2 {
             background: rgba(`+MAIN_BG_COLOR+`,0.95)
         }
@@ -118,7 +123,6 @@ function addGlobalStyle(css) {
         }
 
 
-        .tip-window {background: rgb(`+MAIN_BG_COLOR+`)}
         /* game review editor */
         #layui-layer2 > div > section {
             background: rgb(`+MAIN_BG_COLOR+`)
@@ -129,14 +133,14 @@ function addGlobalStyle(css) {
         #layui-layer2 > div > section > div > div.edit-signplayed-content-box.clearfix > div > div.fr-footer > span {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
-        div.fr-toolbar.custom-theme.fr-ltr.fr-desktop.fr-top.fr-basic.fr-sticky.fr-sticky-off {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
+
 
         /* settings */
             div.setting-card {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
+
+
         /* invite */
         section.invite-header.flex-box {
             background: rgb(`+SECOND_BG_COLOR+`)
@@ -148,6 +152,23 @@ function addGlobalStyle(css) {
             background-image: url("http://www.mountnoon.com/assets/files/2017-03-22/04:07:240-ticket2x-solarized.png")
         }
 
+
+        /* feedback */
+        .layui-layer-wrap {
+            background: rgb(`+MAIN_BG_COLOR+`)
+        }
+        #layui-layer1 > div > div > form > div:nth-child(2) > div.col-11 > div > div.fr-footer > span {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        div.fr-footer {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        div.fr-element.fr-view {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+
+
+        /* other */
         .open-layer {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
