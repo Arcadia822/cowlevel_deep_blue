@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Cowlevel Style
+// @name         Cowlevel Deep Blue
 // @namespace    Arc
 // @version      1.7
-// @description  A Solarized like theme for Cowlevel.net
+// @description  A Solarized like dark theme for Cowlevel.net
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
 // ==/UserScript==
