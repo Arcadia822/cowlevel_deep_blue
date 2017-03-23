@@ -1,2 +1,3 @@
-# CowLevel_Style
-Monkey script modify http://cowlevel.net style
+# Cowlevel Style
+Monkey script for https://cowlevel.net
+A Solarize like theme
