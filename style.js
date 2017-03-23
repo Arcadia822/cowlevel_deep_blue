@@ -152,12 +152,9 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
         section.invite-header.flex-box {
             background: rgb(`+SECOND_BG_COLOR+`)
         }
-        section.vm-user-item-card {
-            background: rgb(`+SECOND_BG_COLOR+`)
-        }
-        section.vm-invitation-item.bg-img {
-            background-image: url("http://www.mountnoon.com/assets/files/2017-03-22/04:07:240-ticket2x-solarized.png")
-        }
+
+
+        /* editor */
 
 
         /* layui */
@@ -176,6 +173,7 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
         .layer {
             background: rgb(`+MAIN_BG_COLOR+`)
         }
+
 
         /* element */
         .vm-draft-card {
@@ -223,6 +221,12 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
         }
         .vm-element-header {
             background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        section.vm-user-item-card {
+            background: rgb(`+SECOND_BG_COLOR+`)
+        }
+        section.vm-invitation-item.bg-img {
+            background-image: url("http://www.mountnoon.com/assets/files/2017-03-22/04:07:240-ticket2x-solarized.png")
         }
 
 
@@ -307,9 +311,6 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
 
     /* editor */
     changeInlineBackgroundByClass("fr-counter", "rgb("+MAIN_BG_COLOR+")");
-    // changeInlineBackgroundByClass("fr-toolbar", "rgb("+MAIN_BG_COLOR+")");
-    // changeInlineBackgroundByClass("fr-footer", "rgb("+MAIN_BG_COLOR+")");
     changeInlineAttrBySelector(".fr-basic", "background", "rgb("+MAIN_BG_COLOR+")");
-    // changeInlineAttrBySelector(".fr-wrapper > div", "background", "rgb("+MAIN_BG_COLOR+")");
-    // changeInlineAttrBySelector(".fr-wrapper > textarea", "background", "rgb("+MAIN_BG_COLOR+")");
+
 })();
