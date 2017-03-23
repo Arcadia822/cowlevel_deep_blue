@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Cowlevel Deep Blue Test
+// @name         Cowlevel Deep Blue
 // @namespace    Arc
 // @version      1.7.1
 // @description  A Solarized like dark theme for Cowlevel.net
