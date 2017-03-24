@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Deep Blue
 // @namespace    Arc
-// @version      1.8
+// @version      1.8.1
 // @description  A Solarized like dark theme for Cowlevel.net
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -22,6 +22,10 @@ var MAIN_COLOR_1='rgb(84,92,102)';
 var MAIN_COLOR_2='rgb(48,60,72)';
 var MAIN_COLOR_3='rgb(7,25,45)';
 var MAIN_COLOR_4='rgb(1,16,34)';
+var MAIN_COLOR_0_1='rgba(26,44,64,0.1)';
+var MAIN_COLOR_0_2='rgba(26,44,64,0.4)';
+var MAIN_COLOR_0_3='rgba(26,44,64,0.9)';
+var MAIN_COLOR_0_4='rgba(26,44,64,1)';
 
 // Secondary color (1):
 
@@ -99,9 +103,13 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
         article.main {
             background: `+MAIN_BG_COLOR+` !important;
         }
+
+        /*
         body > article > section {
             background: `+MAIN_BG_COLOR+` !important;
         }
+        */
+
         body {
             background: `+MAIN_BG_COLOR+` !important;
         }
@@ -114,24 +122,38 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
 
 
         /* transparent background*/
-        .bg-gradient-2 {
-            background: `+MAIN_BG_COLOR+`,0.95) !important;
+        .bg-gradient {
+            background: -moz-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, 0 10%, 0 100%, from(`+MAIN_COLOR_0_1+`), to(`+MAIN_COLOR_0_4+`)) !important;
+            background: -webkit-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* opera 11.10+ */
+            background: -ms-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* ie10+ */
+            background: linear-gradient(180deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A2C40', endColorstr='#1A2C40',GradientType=0 ); /* ie6-9 */
         }
 
-        .bg-gradient {
-            background: -webkit-gradient(linear, 0 24%, 0 60%, from(`+MAIN_BG_COLOR+`,.1)), to(`+MAIN_BG_COLOR+`,1))) !important;
-            background: linear-gradient(-180deg, `+MAIN_BG_COLOR+`,.1) 24%, `+MAIN_BG_COLOR+`,1) 100%)  !important;
-            background: -moz-linear-gradient(top, `+MAIN_BG_COLOR+`.1),`+MAIN_BG_COLOR+`,1))  !important;
+        .bg-gradient-2 {
+            background: -moz-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, 0 10%, 0 100%, from(`+MAIN_COLOR_0_1+`), to(`+MAIN_COLOR_0_4+`)) !important;
+            background: -webkit-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* opera 11.10+ */
+            background: -ms-linear-gradient(270deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* ie10+ */
+            background: linear-gradient(180deg, rgba(26,44,64,0.1) 0%, rgba(26,44,64,0.1) 10%, rgba(26,44,64,1) 100%); /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A2C40', endColorstr='#1A2C40',GradientType=0 ); /* ie6-9 */
         }
 
         .bg-gradient-3{
-            background: -webkit-gradient(linear, 0 24%, 0 60%, from(`+MAIN_BG_COLOR+`,.1)), to(`+MAIN_BG_COLOR+`,1))) !important;
-            background: linear-gradient(-180deg, `+MAIN_BG_COLOR+`,.1) 24%, `+MAIN_BG_COLOR+`,1) 100%) !important;
-            background: -moz-linear-gradient(top, `+MAIN_BG_COLOR+`.1),`+MAIN_BG_COLOR+`,1)) !important;
+            background: -moz-linear-gradient(270deg, rgba(26,44,64,0) 0%, rgba(26,44,64,0) 20%, rgba(26,44,64,1) 85%, rgba(26,44,64,1) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(26,44,64,0)), color-stop(20%, rgba(26,44,64,0)), color-stop(85%, rgba(26,44,64,1)), color-stop(100%, rgba(26,44,64,1))); /* safari4+,chrome */
+            background: -webkit-linear-gradient(270deg, rgba(26,44,64,0) 0%, rgba(26,44,64,0) 20%, rgba(26,44,64,1) 85%, rgba(26,44,64,1) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(270deg, rgba(26,44,64,0) 0%, rgba(26,44,64,0) 20%, rgba(26,44,64,1) 85%, rgba(26,44,64,1) 100%); /* opera 11.10+ */
+            background: -ms-linear-gradient(270deg, rgba(26,44,64,0) 0%, rgba(26,44,64,0) 20%, rgba(26,44,64,1) 85%, rgba(26,44,64,1) 100%); /* ie10+ */
+            background: linear-gradient(180deg, rgba(26,44,64,0) 0%, rgba(26,44,64,0) 20%, rgba(26,44,64,1) 85%, rgba(26,44,64,1) 100%); /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1A2C40', endColorstr='#1A2C40',GradientType=0 ); /* ie6-9 */
         }
 
         .tip-window {
-            background: `+MAIN_BG_COLOR+`
+            background: `+MAIN_COLOR_0_4+`
         }
 
 
@@ -307,4 +329,6 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
     /* editor */
     changeInlineAttrBySelector(".fr-counter", "background", INPUT_BG_COLOR);
     changeInlineAttrBySelector(".fr-basic", "background", INPUT_BG_COLOR);
+
+    /* transparent background */
 })();
