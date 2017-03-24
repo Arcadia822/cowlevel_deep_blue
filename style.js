@@ -243,6 +243,9 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
         section.vm-invitation-item.bg-img {
             background-image: url("http://www.mountnoon.com/assets/files/2017-03-22/04:07:240-ticket2x-solarized.png")
         }
+        .vm-feed-card-pic {
+            background: `+SECOND_BG_COLOR+`
+        }
 
 
         /* comments */
