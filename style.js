@@ -246,6 +246,9 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
         .vm-feed-card-pic {
             background: `+SECOND_BG_COLOR+`
         }
+        .vm-feed-card-video {
+            background: `+SECOND_BG_COLOR+`
+        }
 
 
         /* comments */
