@@ -2,7 +2,7 @@
 // @name         Cowlevel Deep Blue
 // @namespace    Arc
 // @version      1.8.3
-// @description  A Solarized like dark theme for Cowlevel.net
+// @description  A Solarized like dark theme for Cowlevel.net. Repository: https://github.com/Arcadia822/cowlevel_deep_blue
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
 // ==/UserScript==
