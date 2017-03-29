@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Cowlevel Deep Blue
 // @namespace    Arc
-// @version      1.8.2
+// @version      1.8.3
 // @description  A Solarized like dark theme for Cowlevel.net
 // @author       Arcadia
 // @match        https://*.cowlevel.net/*
@@ -248,6 +248,12 @@ function changeInlineAttrBySelector(selector, attr_name, css) {
         }
         .vm-feed-card-video {
             background: `+SECOND_BG_COLOR+`
+        }
+        .vm-feed-card-article-comment {
+            background: `+SECOND_BG_COLOR+`
+        }
+        .vm-quote-article {
+            background: `+LIGHT_BG_COLOR+`
         }
 
 
